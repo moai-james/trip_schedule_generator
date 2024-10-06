@@ -1,6 +1,6 @@
 import { TripData } from '../types';
 
-const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
+const API_KEY = import.meta.env.OPENAI_API_KEY;
 
 export const generateIntroductions = async (tripData: TripData): Promise<{ [key: string]: string }> => {
   const introductions: { [key: string]: string } = {};

@@ -1,7 +1,7 @@
 import { TripData } from '../types';
 
-const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
-const SEARCH_ENGINE_ID = import.meta.env.VITE_GOOGLE_SEARCH_ENGINE_ID;
+const API_KEY = import.meta.env.GOOGLE_API_KEY;
+const SEARCH_ENGINE_ID = import.meta.env.GOOGLE_SEARCH_ENGINE_ID;
 
 export const searchImages = async (tripData: TripData): Promise<{ [key: string]: string[] }> => {
   const images: { [key: string]: string[] } = {};
