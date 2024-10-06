@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Custom Search Engine styles */
+.gcse-search {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.gsc-control-cse {
+  border-color: transparent !important;
+  background-color: transparent !important;
+}
+
+.gsc-input-box {
+  border-radius: 4px;
+}
+
+.gsc-search-button-v2 {
+  border-radius: 0 4px 4px 0;
+}
