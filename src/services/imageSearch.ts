@@ -1,9 +1,16 @@
 import { TripData } from '../types';
 
-const API_KEY = import.meta.env.GOOGLE_API_KEY;
-const SEARCH_ENGINE_ID = import.meta.env.GOOGLE_SEARCH_ENGINE_ID;
+const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
+const SEARCH_ENGINE_ID = import.meta.env.VITE_GOOGLE_SEARCH_ENGINE_ID;
+
+if (!API_KEY || !SEARCH_ENGINE_ID) {
+  throw new Error('VITE_GOOGLE_API_KEY and VITE_GOOGLE_SEARCH_ENGINE_ID must be set in the environment variables');
+}
 
 export const searchImages = async (tripData: TripData): Promise<{ [key: string]: string[] }> => {
+  console.log('API Key:', API_KEY);
+  console.log('Search Engine ID:', SEARCH_ENGINE_ID);
+
   const images: { [key: string]: string[] } = {};
 
   for (const day of tripData.days) {
